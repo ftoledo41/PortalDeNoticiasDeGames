@@ -1,0 +1,432 @@
+/* VARIABLES */
+
+/* 1 */
+:root {
+  --color-principal: #fff;
+  --color-secondary: #329153;
+  --color-bg-navbar: #333946;
+  --color-border-list: rgba(255, 255, 255, 0.3);
+  --color-hover-sublist-item: rgba(0, 0, 0, 0.05);
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-bg-marquee: #eeeeee;
+  --color-text-marquee: #7c7c7c;
+  --color-titles: #333333;
+  --color-bg-aside: #f5f5f5;
+  --color-twitter: #2fc2ef;
+  --color-facebook: #4c66a4;
+  --color-instagram: #ea4c89;
+  --color-youtube: #cc181e;
+  --color-linkedin: #f4a62a;
+  --color-footer: #222222;
+  --color-footer-down: #111111;
+}
+
+/* ESTILOS GENERALES */
+
+/* 3 */
+html {
+  font-size: 10px;
+}
+
+/* 2 */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-principal);
+}
+
+/* 3 */
+/* BARRA DECORATIVA */
+.decoration-bar {
+  width: 100%;
+  min-height: 2.5rem;
+  background-color: var(--color-secondary);
+}
+
+/* 4 */
+/* ESTRUCTURA Y LAYOUT */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "marquee marquee"
+    "slider slider"
+    "high high "
+    "videos videos"
+    "carousel carousel"
+    "main aside";
+  grid-template-columns: 70% 30%;
+  width: 55vw;
+  min-width: 100rem;
+  margin: 0 auto;
+}
+
+/* 5 - 14*/
+/* ESTILOS HEADER CABECERA*/
+.layout__header {
+  grid-area: header;
+
+  width: 100%;
+  min-width: 100%;
+  padding: 2rem 0;
+}
+
+/* 15 */
+.header__img {
+  width: 17rem;
+}
+
+/* ESTILOS NAVEGACION */
+/* 6 - 16 */
+.layout__nav {
+  grid-area: nav;
+  position: relative;
+  width: 100%;
+}
+
+/* 17 */
+.nav__navbar {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5rem;
+  max-height: 5rem;
+  width: 100%;
+  color: var(--color-principal);
+  background-color: var(--color-bg-navbar);
+}
+
+/* 19 */
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 21 */
+.navbar__item {
+  /* padding: 1.3rem 0; */
+  height: 5rem;
+}
+
+/* 20 */
+.navbar__item:hover {
+  background-color: var(--color-secondary);
+}
+
+/* 22 */
+.navbar__link {
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1.5rem 1.5rem;
+}
+
+/* 23 */
+.navbar__search {
+  display: flex;
+  height: 100%;
+}
+
+/* 24 - 29 */
+.search__input {
+  /* a valor 0 por la parte javascript */
+  width: 0;
+  height: 5rem;
+  font-size: 1.6rem;
+  background-color: var(--color-secondary);
+  color: var(--color-principal);
+  outline: none;
+  border: none;
+  transition: all 200ms ease-out;
+/* Comentado por la parte javascript */
+  /* display: none; */
+}
+
+/* 25 - 30 */
+.search__input::placeholder {
+  color: var(--color-principal);
+  padding: 0.5rem;
+  opacity: 1;
+}
+
+/* 26 - 28 */
+.navbar__btn-search,
+.navbar__mobile-btn {
+  background-color: var(--color-secondary);
+  padding: 0.8rem 1.3rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 27 */
+.navbar__btn-search .fa-solid,
+.navbar__mobile-btn .fa-solid {
+  cursor: pointer;
+  color: var(--color-principal);
+  font-size: 2.7rem;
+}
+
+/* ESTILOS SUBMENU */
+/* 31 */
+
+/* 18 - 31 */
+/* Por mientras */
+.navbar__item:hover .navbar__submenu {
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-in-out;
+}
+
+/* 32 */
+.navbar__item:hover .submenu__carousel {
+  display: block;
+}
+
+/* 33 */
+.navbar__submenu {
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 9;
+  overflow: hidden;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--color-secondary);
+
+  display: flex;
+  flex-direction: row;
+}
+
+/* 45 */
+.navbar__submenu--small {
+  left: auto;
+  width: 20%;
+  overflow: visible;
+}
+
+/* 46 */
+.navbar__submenu--small > .navbar__sublist {
+  width: 100%;
+}
+
+/* 34 */
+.navbar__sublist {
+  display: inline-block;
+  padding: 1rem;
+  width: 26%;
+}
+
+/* 35 */
+.sublist__item {
+  padding: 0.1rem 0;
+  position: relative;
+  border-bottom: 1px solid var(--color-border-list);
+}
+
+/* 36 */
+.sublist__item:hover {
+  background-color: var(--color-hover-sublist-item);
+}
+
+/* 44 */
+.sublist__item:last-child {
+  border: none;
+}
+
+/* 37 */
+.sublist__link {
+  color: var(--color-principal);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  /* reduce los espacios en blanco */
+  white-space: nowrap;
+}
+
+/* 38 */
+/* Se van hacia el lado */
+.sublist__dropdown {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  padding: 1rem;
+  width: 21rem;
+  background-color: var(--color-principal);
+  box-shadow: 2px 0px 2px -1px var(--color-shadow);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+}
+
+/* 39 */
+.sublist__item:hover .sublist__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-in-out;
+}
+
+/* 40 */
+
+.dropdown__item {
+  border-bottom: 1px solid var(--color-hover-sublist-item);
+}
+
+/* 41 */
+.dropdown__item:hover {
+  background-color: var(--color-hover-sublist-item);
+}
+
+/* 43 */
+.dropdown__item:last-child {
+  border: none;
+}
+
+/* 42 */
+.dropdown__link {
+  color: var(--color-bg-navbar);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* ESTILOS CARRUSELES SUBMENUS */
+/* 47 */
+.carousel__menu {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 48 */
+.carousel__item {
+  flex-basis: 25%;
+  position: relative;
+}
+
+/* 49 */
+.carousel__menu--small > .carousel__item {
+  /* 57 */
+  flex-basis: 25%;
+}
+
+/* 50 */
+.carousel__container-img {
+  position: relative;
+  width: calc(100% + 3.5rem);
+  height: 35rem;
+  overflow: hidden;
+}
+
+/* 51 */
+.carousel__img {
+  width: auto;
+  height: 100%;
+}
+
+/* 52 */
+.carousel__container-rating {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+/* 54 */
+.container-rating__circle,
+.rating__circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 3.2rem;
+  background-color: var(--color-secondary);
+  padding: 0.2rem;
+}
+
+/* 55 */
+.container-rating__border,
+.rating__border,
+.circle__border {
+  width: 100%;
+  height: 100%;
+  border-radius: 3.2rem;
+  border: 2px solid var(--color-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 56 */
+.container-rating__mark,
+.ratin__mark,
+.circle__mark {
+  font-weight: 700;
+  color: var(--color-principal);
+}
+
+/* 53 */
+.carousel__detail {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 59 */
+.carousel__link {
+  color: var(--color-principal);
+  background-color: var(--color-shadow);
+  font-size: 1.7rem;
+  text-shadow: 1px 1px 3px black;
+  transition: all 300ms ease;
+}
+
+/* 58 */
+.carousel__title:hover > .carousel__link {
+  background-color: var(--color-secondary);
+}
+
+/* ESTILOS SUB ENCABEZADOS */
+.news__subheader,
+.games__subheader,
+.login__subheader,
+.post__subheader,
+.recent__subheader,
+.videos__subheader,
+.highlights__subheader,
+.last-reviews__subheader {
+  width: 100%;
+  height: 3.5rem;
+  margin-bottom: 3rem;
+  background-color: var(--color-bg-navbar);
+  padding: 0.5rem;
+}
+
+.subheader__title,
+.news__title,
+.list-header__title,
+.subheader__title,
+.last-reviews__link-title {
+  display: inline;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.5rem;
+  color: var(--color-principal);
+  background-color: var(--color-secondary);
+}

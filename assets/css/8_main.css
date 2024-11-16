@@ -1,0 +1,679 @@
+/* ESTILOS CONTENIDO PRINCIPAL MAIN */
+/* 12 - 132*/
+.layout__main {
+  grid-area: main;
+  margin-right: 3rem;
+}
+
+/* ESTILOS PARA LAS NOTICIAS */
+/* 133 */
+.main__news {
+  width: 100%;
+}
+
+/* 134 */
+.news__main-post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--color-bg-marquee);
+}
+
+/* 135 */
+.main-post__image {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 50%;
+  height: 20rem;
+}
+
+/* 136 */
+.main-post__info {
+  flex-basis: 50%;
+}
+
+/* 137 */
+.main-post__img {
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in-out;
+}
+
+/* 138 */
+.main-post__img:hover {
+  transform: scale(1.1);
+}
+
+/* 139 */
+.main-post__container-category {
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary);
+}
+
+/* 140 */
+.main-post__container-category:hover {
+  background-color: var(--color-bg-navbar);
+}
+
+/* 141 */
+.main-post__category {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-principal);
+}
+
+/* 142 */
+.main-post__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* 143 */
+.main-post__link-title {
+  color: var(--color-titles);
+  transition: all 300ms ease-in-out;
+}
+
+/* 144 */
+.main-post__title:hover .main-post__link-title {
+  color: var(--color-secondary);
+}
+
+/* 145 */
+.main-post__meta,
+.news__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* 146 */
+.main-post__description {
+  font-size: 1.3rem;
+  color: var(--color-titles);
+  margin-bottom: 1rem;
+}
+
+/* 147 */
+.main-post__footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 148 */
+.news__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* 149 */
+.news__post {
+  display: flex;
+  gap: 1rem;
+  /* Aqui quedaron de a dos, buscar los 2 rem */
+  flex-basis: calc(50% - 2rem);
+}
+
+/* 150 */
+.news__image {
+  overflow: hidden;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+/* 151 */
+.news__img {
+  width: 100%;
+  height: 100%;
+  transition: all 300ms;
+}
+
+/* 152 */
+.news__image:hover .news__img {
+  transform: scale(1.1);
+}
+
+/* 153 */
+.news__detail {
+  width: 75%;
+}
+
+/* 154 */
+.news__title-post {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 155 */
+.news__link-title {
+  color: var(--color-titles);
+  transition: all 300ms ease-in-out;
+}
+
+/* 156 */
+.news__link-title:hover {
+  color: var(--color-secondary);
+}
+
+/* 157 */
+.news__data {
+  justify-content: left;
+  gap: 1rem;
+}
+
+/* juegos - ultimos articulos*/
+
+/* 158 */
+.main__games {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+/* 159 */
+.games__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* 160 */
+.games__game {
+  position: relative;
+  flex-basis: calc(50% - 1.5rem);
+}
+
+/* 161 */
+.game__container-image {
+  overflow: hidden;
+}
+
+/* 162 */
+.game__img {
+  width: 100%;
+  transition: all 300ms;
+}
+
+/* 163 */
+.game__img:hover {
+  transform: scale(1.1);
+}
+
+/* 164 */
+.game__rating {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 9;
+}
+
+/* 165 */
+.game__details {
+  width: 100%;
+  min-height: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  padding-right: 5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 166 */
+.game__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+/* 168 */
+.game__title:hover {
+  text-shadow: 0 0 5px black;
+}
+
+/* 167 */
+.game__link-itle {
+  color: var(--color-principal);
+  transition: all 300ms ease;
+}
+
+/* ULTIMOS ARTICULOS */
+
+/* 169 */
+.main__posts {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+/* 170 */
+.post__list-header,
+.recent__list-header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* 171 */
+.list-header--small {
+  font-weight: 400;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+/* 172 */
+.list-header--small {
+  font-size: 1.1rem;
+}
+
+/* 173 */
+.posts__container {
+  flex-wrap: wrap;
+}
+
+/* 174 */
+.posts__post {
+  flex-basis: calc(50% - 2rem);
+}
+
+/* ESTILOS BARRA LATERAL ASIDE */
+/* 13 - 175*/
+.layout__aside {
+  grid-area: aside;
+  background-color: var(--color-bg-aside);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+/* 176 */
+.login__container {
+  width: 100%;
+}
+
+/* 177 */
+.login__form {
+  width: 100%;
+}
+
+/* 189 */
+.form__container-username,
+.form__container-password,
+.form__container-remember {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* 191 */
+.form__label {
+  font-weight: 500;
+}
+
+/* 190 */
+.form__input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+/* 192 */
+.form__container-remember .form__input,
+.form__container-remember .form__label {
+  width: auto;
+  display: inline;
+}
+
+/* 193 */
+
+.form__submit {
+  width: 100%;
+  height: 3.7rem;
+  background-color: var(--color-secondary);
+  color: var(--color-principal);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* 194 */
+.login__register,
+.login__lost-pass {
+  display: block;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+/* ESTILOS REDES SOCIALES */
+/* 195 */
+.aside__social {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* 196 */
+.social__list {
+  width: 100%;
+}
+
+/* 197 */
+.social__item {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  color: var(--color-principal);
+  transition: all 300ms ease;
+  background-color: var(--color-twitter);
+}
+
+/* 198 */
+.social__item:hover {
+  padding-left: 3rem;
+}
+
+/* 199 */
+.social__link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: var(--color-principal);
+}
+
+/* 200 */
+.social__icon {
+  margin-right: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+/* 201 */
+.social__icon > .fa-brands {
+  font-size: 3.6rem;
+}
+
+/* 202 */
+.social__number {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* 203 */
+.social__word {
+  line-height: 1;
+  font-size: 1.3rem;
+  opacity: 0.75;
+}
+
+/* 204 */
+.social__item--dark-blue {
+  background-color: var(--color-facebook);
+}
+
+/* 205 */
+.social__item--red {
+  background-color: var(--color-youtube);
+}
+
+/* 206 */
+.social__item--pink {
+  background-color: var(--color-instagram);
+}
+
+/* 207 */
+.social__item--yellow {
+  background-color: var(--color-linkedin);
+}
+
+/* ESTILOS ULTIMOS TWEETS */
+/* 208 */
+.aside__tweets {
+  background-color: var(--color-twitter);
+  color: var(--color-principal);
+  font-size: 1.3rem;
+  padding: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* 209 */
+.tweets__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* 210 */
+.tweets__header .fa-brands {
+  margin-right: 1rem;
+}
+
+/* 211 */
+.tweets__content {
+  margin-bottom: 3rem;
+  hyphens: auto;
+}
+
+/* 212 */
+.tweets__title {
+  font-weight: 400;
+  font-size: 1.3;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* ESTILOS POST RECIENTES */
+/* 213 */
+.aside__recent {
+  margin-bottom: 3rem;
+}
+
+/* 214 */
+.aside__recent .list-header__title {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.5rem;
+}
+
+/* 215 */
+.aside__recent .list-header--small {
+  background: none;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+/* 216 */
+.recent__list-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 220 */
+.recent__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* 217 */
+.recent__container-img {
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+}
+
+/* 218 */
+.recent__img {
+  width: 100%;
+  transition: all 300ms ease;
+}
+
+/* 219 */
+.recent__img:hover {
+  transform: scale(1.1);
+}
+
+/* 225 */
+.recent__details {
+  width: 100%;
+}
+
+/* 221 */
+.recent__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 222 */
+.recent__link-title {
+  color: var(--color-titles);
+  transition: all 300ms ease;
+}
+
+/* 223 */
+.recent__link-title:hover {
+  color: var(--color-secondary);
+}
+
+/* 224 */
+.recent__container-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ULTIMAS REVIEWS */
+/* 226 */
+.aside__last-reviews {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+/* 227 */
+.aside__last-reviews .last-reviews__subheader {
+  padding: 0.15rem 0.5rem;
+}
+
+/* 228 */
+.aside__last-reviews .last-reviews__list-header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 229 */
+.aside__last-reviews .last-reviews__link-title--small {
+  background: none;
+  font-size: 1.1rem;
+}
+
+/* 230 */
+.last-reviews__list-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list-reviews__item {
+  width: 100%;
+}
+
+.list-reviews__container-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-reviews__title {
+  text-align: left;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.list-reviews__title-link {
+  color: var(--color-titles);
+  transition: all 300ms ease-in-out;
+}
+
+.list-reviews__title-link:hover {
+  color: var(--color-secondary);
+}
+
+.list-reviews__mark {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-titles);
+}
+
+.list-reviews__progressbar {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color-bg-navbar);
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.list-reviews__bar {
+  height: 100%;
+  border-radius: 0.3rem;
+  background-color: var(--color-secondary);
+}
+
+.list-reviews__bar--bar1 {
+  width: 75%;
+}
+
+.list-reviews__bar--bar2 {
+  width: 65%;
+}
+
+.list-reviews__bar--bar3 {
+  width: 81%;
+}
+
+.list-reviews__bar--bar4 {
+  width: 75%;
+}
+
+.list-reviews__bar--bar5 {
+  width: 90%;
+}
+
+
+/* ESTILOS BOTON MAIN */
+.posts__read-more{
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0.4rem;
+  border: 1px solid var(--color-bg-navbar);
+  transition: all 300ms ease-in-out;
+}
+
+
+.posts__read-more:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-principal);
+  border-color: var(--color-secondary);
+}
